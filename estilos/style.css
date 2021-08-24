@@ -1,0 +1,557 @@
+/*! HTML5 Boilerplate v8.0.0 | MIT License | https://html5boilerplate.com/ */
+/* main.css 2.1.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+#description.absolute {
+  bottom: 0px;
+}
+#description.fixed {
+  top: 0px;
+}
+
+.food {
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  padding: 0px;
+  overflow: hidden;
+}
+.food:hover .screen {
+  top: 0px;
+}
+.food .screen {
+  background-color: rgba(0, 0, 0, 0.8);
+  position: relative;
+  top: -100%;
+  height: 100%;
+  width: 100%;
+  -webkit-transition: top 0.39s;
+  transition: top 0.39s;
+}
+
+#menutitle {
+  width: 300px;
+  z-index: 4;
+  top: 50%;
+  top: calc(50% - 2.5em);
+  left: calc(50% - 150px);
+}
+
+#gallery {
+  width: 100%;
+  overflow-x: hidden;
+  height: 100%;
+}
+#gallery .inner {
+  left: 0%;
+  -webkit-transition: left 1.5s;
+  transition: left 1.5s;
+  white-space: nowrap;
+  position: relative;
+}
+#gallery .images {
+  display: inline-block;
+  height: 80vh;
+  width: 100%;
+  margin-right: -4px;
+  background-size: cover;
+  background-position: center;
+}
+
+.container .card {
+  padding: 2em;
+  margin-top: -200px;
+}
+
+#contact {
+  margin-top: -200px;
+}
+
+.step-form .step {
+  max-height: 0px;
+  overflow: hidden;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  margin: 0px;
+}
+.step-form .step.active {
+  padding: 1em 0.5em;
+  max-height: 100px;
+}
+.step-form .step input, .step-form .step textarea {
+  font-size: 1.5em;
+  padding: 0.5em;
+  border: none;
+  outline: none;
+  border-bottom: solid 1px #eee;
+  background: transparent;
+  width: 77%;
+}
+
+.path-step {
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  background-color: #a2a2a2;
+  margin-top: 2em;
+  opacity: 0.4s;
+  display: block;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+.path-step.active {
+  opacity: 1;
+  background-color: white;
+  -webkit-box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.8);
+          box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.8);
+}
+.path-step:hover {
+  -webkit-box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.8);
+          box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.8);
+  opacity: 0.9s;
+}
+
+#location {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: -50px;
+}
+
+#map {
+  height: 500px;
+}
+
+#menu-opener {
+  display: none;
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+.white-text {
+  color: #ffffff;
+}
+
+.black-text {
+  color: #000000;
+}
+
+.sombratitle {
+  text-shadow: 2px 2px 5px #999;
+}
+
+.dancing-script {
+  font-family: "Dancing Script", cursive;
+}
+
+.black {
+  background-color: #222;
+}
+
+.white {
+  background-color: white;
+}
+
+.card {
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+}
+
+.full-width {
+  width: 100%;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.top {
+  top: 3em;
+}
+
+.right {
+  right: 5em;
+}
+
+.bottom {
+  bottom: 0px;
+}
+
+.slim {
+  font-weight: 200;
+}
+
+.large-padding {
+  padding: 10px;
+}
+
+.midium, .navigation li {
+  font-size: 1.5em;
+}
+
+.title {
+  font-size: 4em;
+}
+
+.subtitle {
+  font-size: 2.5em;
+}
+
+.up {
+  z-index: 5;
+}
+
+.full-height {
+  height: 100%;
+}
+
+.row {
+  margin: 0;
+}
+
+.no-margin {
+  margin: 0;
+  border-radius: 50%;
+}
+
+.top-space {
+  margin-top: 2em;
+}
+
+.redondear {
+  border-radius: 50%;
+}
+
+/*
+ * Hide visually and from screen readers
+ */
+.hidden,
+[hidden] {
+  display: none;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+ * Extends the .sr-only class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+.sr-only.focusable:active,
+.sr-only.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+.invisible {
+  visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.clearfix::before,
+.clearfix::after {
+  content: " ";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+@media only screen and (max-height: 600px) {
+  #contact, .container.card {
+    margin-top: -15%;
+  }
+}
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+@media only screen and (max-width: 500px) {
+  #responsive-nav ul {
+    top: 90px;
+  }
+}
+@media only screen and (max-width: 960px) {
+  #navigation {
+    display: none !important;
+  }
+
+  .path-step {
+    display: inline-block;
+    margin-right: 1em;
+  }
+
+  #menu-opener {
+    display: block;
+  }
+
+  #responsive-nav {
+    max-width: auto;
+  }
+  #responsive-nav ul {
+    max-width: auto;
+    position: absolute;
+    width: 100%;
+    font-size: 1.5em;
+    top: 35px;
+    background-color: #222;
+    left: 0px;
+    text-align: center;
+    max-height: 0px;
+    overflow: hidden;
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
+  }
+  #responsive-nav ul.active {
+    max-height: 80vh;
+  }
+  #responsive-nav ul li {
+    max-width: auto;
+    display: block;
+    margin-top: 1em;
+  }
+
+  /* Style adjustments for viewports that meet the condition */
+}
+@media print, (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 1.25dppx), (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+@media print {
+  *,
+*::before,
+*::after {
+    background: #fff !important;
+    color: #000 !important;
+    /* Black prints faster */
+    -webkit-box-shadow: none !important;
+            box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]::after,
+a[href^="javascript:"]::after {
+    content: "";
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  pre,
+blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  /*
+   * Printing Tables:
+   * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
+   */
+  thead {
+    display: table-header-group;
+  }
+
+  tr,
+img {
+    page-break-inside: avoid;
+  }
+
+  p,
+h2,
+h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+h3 {
+    page-break-after: avoid;
+  }
+}
+.video-container {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: absolute;
+}
+.video-container video {
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.navigation li {
+  padding: 5px;
+  -webkit-transition: all 0.6s;
+  transition: all 0.6s;
+}
+.navigation li:hover {
+  background-color: rgba(205, 255, 66, 0.8);
+}
+.navigation li a {
+  color: #ffff;
+  cursor: pointer;
+}
+.navigation li a:hover {
+  text-decoration: none;
+}
