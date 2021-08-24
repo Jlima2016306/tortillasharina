@@ -1,4 +1,4 @@
-const cache_name = "torrtillas-v2"
+const cache_name = "torrtillas-v1"
 const cache_urls =["/offline/ofline.html",
                     "/offline/style.css",
                     "/imagenes/food/res.png"]
